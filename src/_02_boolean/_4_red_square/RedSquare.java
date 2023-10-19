@@ -23,25 +23,31 @@ public class RedSquare {
 		// operator. 
 		if(isRed && isSquare) {
 			drawRedSquare();
+		} else if (!isRed && isSquare) {
+			drawBlueSquare();
+		} else if (isRed && !isSquare) {
+			drawRedTriangle();
+		} else if (!isRed && !isSquare) {
+			drawBlueTriangle();
 		}
 		else {
             JOptionPane.showMessageDialog(null, "No shape was drawn!");
         }
 		
-		// 1. Run the program and notice no shape is drawn.
+		// 1. Run the program and notice no shape is drawn. X
 		
 		// 2. Initialize isRed to true instead of false and run the program 
-		//    again.
+		//    again. X
 		
 		// 3. Write an else if statement after the if statement that calls 
 		//    drawBlueSquare if isRed is false AND isSquare is true. 
-		//    Hint: Use ! and &&.
+		//    Hint: Use ! and &&. X
 		
 		// 4. Write an else if statement that calls drawRedTriangle() if isRed
-		//    is true and isSquare is false.
+		//    is true and isSquare is false. X
 		
 		// 5. Write an else if statement that calls drawBlueTriangle if both
-		//    isRed and isSquare are false.
+		//    isRed and isSquare are false. X
 		
 		// 6. Keep rerunning your program, initializing isRed and isSquare to 
 		//    different values until you've seen a red square, red triangle, 

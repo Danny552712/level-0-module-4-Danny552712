@@ -12,7 +12,7 @@ public class SleepyHead {
 		// i.e. >, <, ==, >=, <=, .equals() which all produce a true or false
 		// value.
 		
-		boolean isWeekend = true;
+		boolean isWeekend = false;
 		
         // 1.) Run the program and look at the if-else statement below.
 		
