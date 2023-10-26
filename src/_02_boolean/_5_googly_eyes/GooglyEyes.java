@@ -8,13 +8,13 @@ import processing.core.PImage;
  * 
  * Instructions:
  * 1. Find an image on the Internet and drop it into the /images folder at the
- *    top level of this module. It can be anything as long as it has large eyes!
+ *    top level of this module. It can be anything as long as it has large eyes! X
  * 
  * 2. Declare a variable for the image:
- *    PImage face;
+ *    PImage face; X
  * 
  * 3. In your setup() method, import your image using the following code:
- *    face = loadImage("face.jpg");
+ *    face = loadImage("face.jpg");X
  * 
  * 4. Resize your face image to the size of the window using the resize() method.
  * 
@@ -31,7 +31,7 @@ import processing.core.PImage;
  * 9. Add a right pupil and make it move by using
  *    mouseX + [distance from left eye] and mouseY + [distance from left eye].
  * 
- * 10.Here’s the tricky part: stop the pupils from going outside of the white
+ * 10.Here's the tricky part: stop the pupils from going outside of the white
  *    circles! To do this, imagine a rectangle that the pupil should stay
  *    within. When mouseX and mouseY goes outside of these bounds, set it back
  *    to the boundary. Put this code before you draw the pupils.
@@ -49,15 +49,30 @@ public class GooglyEyes extends PApplet {
     
     @Override
     public void setup() {
-
+    	face = loadImage("cat.jpg");
+    	face.resize(WIDTH, HEIGHT);
+    	background(face);
     }
 
     @Override
     public void draw() {
-
+    	if(mousePressed){
+            println("Mouse’s x-position: " + mouseX + "\n" + "Mouse’s y-position: " + mouseY + "\n");
+        }
+    	
+    	//Draw eyes
+    	noStroke();
+    	
+    	ellipse(219, 278, 215, 170);
+    	ellipse(552, 267, 215, 170);
+    	
+    	//Pupils
+    	color(000000);
+    	ellipse(100, 100, 20, 20);
     }
 
     static public void main(String[] args) {
         PApplet.main(GooglyEyes.class.getName());
+
     }
 }
