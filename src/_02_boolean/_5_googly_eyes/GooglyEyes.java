@@ -16,11 +16,11 @@ import processing.core.PImage;
  * 3. In your setup() method, import your image using the following code:
  *    face = loadImage("face.jpg");X
  * 
- * 4. Resize your face image to the size of the window using the resize() method.
+ * 4. Resize your face image to the size of the window using the resize() method. X
  * 
  * 5. In the draw() method, place a white ellipse over the left eye of your image.
       HINT: To find out where to put it, add code to print the mouseX and
-      mouseY where you click the mouse.
+      mouseY where you click the mouse. X
  *
  * 6. Now add a pupil (the black part) to the left eye.
  * 
@@ -60,19 +60,50 @@ public class GooglyEyes extends PApplet {
             println("Mouse’s x-position: " + mouseX + "\n" + "Mouse’s y-position: " + mouseY + "\n");
         }
     	
+    	int x = mouseX;
+    	int y = mouseY;
+    	
     	//Draw eyes
     	noStroke();
     	
+    	fill(0, 0, 0);
     	ellipse(219, 278, 215, 170);
     	ellipse(552, 267, 215, 170);
     	
     	//Pupils
-    	color(000000);
-    	ellipse(100, 100, 20, 20);
+    	
+    	fill(260, 260, 260);
+    	
+    	//When mouse moves, change pupil position
+    	if(((x >= 140 && x <= 300) && (y >= 200 && y <= 335))) {
+    		background(face);
+    		fill(0, 0, 0);
+        	ellipse(219, 278, 215, 170);
+        	ellipse(552, 267, 215, 170);
+        	fill(260, 260, 260);
+    		ellipse(x, y, 20, 20);
+    		ellipse(x + 300, y, 20, 20);
+        } else if ((x >= 440 && x <= 600) && (y >= 200 && y <= 335)){
+        	background(face);
+        	fill(0, 0, 0);
+        	ellipse(219, 278, 215, 170);
+        	ellipse(552, 267, 215, 170);
+        	fill(260, 260, 260);
+        	ellipse(x, y, 20, 20);
+    		ellipse(x - 300, y, 20, 20);
+        } else {
+        	background(face);
+        	fill(260, 260, 260);
+        	ellipse(219, 278, 215, 170);
+        	ellipse(552, 267, 215, 170);
+        	fill(0, 0, 0);
+        	ellipse(530, 280, 20, 20);
+        	ellipse(230, 280, 20, 20);
+        }
     }
 
     static public void main(String[] args) {
         PApplet.main(GooglyEyes.class.getName());
-
+        
     }
 }
