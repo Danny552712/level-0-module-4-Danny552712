@@ -66,13 +66,13 @@ public class GooglyEyes extends PApplet {
     	//Draw eyes
     	noStroke();
     	
-    	fill(0, 0, 0);
+    	fill(255, 255, 255);
     	ellipse(219, 278, 215, 170);
     	ellipse(552, 267, 215, 170);
     	
     	//Pupils
     	
-    	fill(260, 260, 260);
+    	fill(0, 0, 0);
     	
     	//When mouse moves, change pupil position
     	if(((x >= 140 && x <= 300) && (y >= 200 && y <= 335))) {
