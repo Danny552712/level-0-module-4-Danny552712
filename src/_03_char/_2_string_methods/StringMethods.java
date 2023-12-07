@@ -32,15 +32,9 @@ public class StringMethods {
 		//    EXAMPLE: if your string is "abc" and you are searching 
 		//             for char 'b', then print "b is at index 1"
 		int index = 0;
-		String missing = "i";
+		String missing = "er";
 		
-		for(int i = 0; i > apple.length(); i++) {
-			if(apple.charAt(i) == missing) {
-				index = i;
-			}
-		}
-		
-		System.out.println();
+		System.out.println(missing + " is at index " + apple.indexOf(missing));
 	}
 }
 
