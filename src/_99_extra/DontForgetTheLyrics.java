@@ -18,7 +18,9 @@ public class DontForgetTheLyrics {
 	
 	public static void main(String[] args) {
 		// 4. Make a pop-up to explain the game.
-
+		JOptionPane.showMessageDialog(null, "Greetings, in this game you will have to memorize \n"
+										+ "the lyrics of the songs and correctly type in the"
+										+ " \nwords that matches the lyrics.");
 		// 5. Use the playSound method to play your song.
 
 		// 6. Make a pop-up for the player to type their answer.

@@ -28,18 +28,35 @@ public class PiAloud {
     // 5. Skip this step if your computer cannot play sounds.
     if (canPlaySounds) {
         //Use the Sound.speak() method to speak each digit of Pi.
-        Sound.speak();
+        //Sound.speak();
     }
-    }
+    
 
     // [CHALLENGE]
     // *6. Get a character from the user using the getInputFromUser() method
     // *7. Compare the users' char to the next digit of Pi
     // *8. If they are correct, print out "correct". If they are not, print "incorrect"
     
-    getInputFromUser();
-
-
+    boolean gameContinuation = true;
+    int index = 0;
+    
+    
+    while(gameContinuation) {
+    	char input = PiAloud.getInputFromUser();
+    	PiAloud.pause(1);
+    	if(input == digitsOfPi.charAt(index)) {
+    		System.out.println("correct");
+    	} else {
+    		System.out.println("incorrect, it was " + digitsOfPi.charAt(index));
+    	}
+    	index++;
+    	if(index >= digitsOfPi.length()) {
+    		gameContinuation = false;
+    		System.out.println("The End \nNo more characters of Pi in program");
+    	}
+    }
+    
+    }
     /********************  Use these methods. DON'T CHANGE THE CODE BELOW  ******************/
 
     private static void pause(int seconds) {
