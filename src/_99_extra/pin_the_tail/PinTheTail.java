@@ -21,7 +21,7 @@ public class PinTheTail extends PApplet {
     public void setup() {
     	donkey = loadImage("donkey.jpg");      //change the file name if you need to
     	tail = loadImage("tail.jpg");      //change the file name if you need to
-    	tail.resize(10, 30);     //replace width, height with your tail's dimensions
+    	tail.resize(150, 250);     //replace width, height with your tail's dimensions
     }
     
     @Override
@@ -31,8 +31,8 @@ public class PinTheTail extends PApplet {
 
     @Override
     public void draw() {
-    	background(donkey);
-    	image(tail, mouseX-10, mouseY-20);
+    	image(donkey, 0, 0, WIDTH, HEIGHT);
+    	image(tail, mouseX - 90, mouseY - 40);
     }
 
     static public void main(String[] args) {

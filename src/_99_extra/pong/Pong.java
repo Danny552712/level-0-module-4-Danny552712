@@ -37,7 +37,7 @@ public class Pong extends PApplet {
     		//System.out.println("x: " + xSpeed);
     	}
     	
-    	if(bally > HEIGHT || bally <= 0 || (bally == recty && (ballx >= mouseX && ballx <= mouseX + 100))) {
+    	if(bally > HEIGHT || bally <= 0 || ((bally >= recty && bally <= recty + 30) && (ballx >= mouseX && ballx <= mouseX + 100))) {
     		ySpeed = -ySpeed;
     		//System.out.println("y: " + ySpeed);
     	}
