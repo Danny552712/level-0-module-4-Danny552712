@@ -33,6 +33,9 @@ public class PinTheTail extends PApplet {
     public void draw() {
     	image(donkey, 0, 0, WIDTH, HEIGHT);
     	image(tail, mouseX - 90, mouseY - 40);
+    	
+    	rect(0, 0, 30, 30);
+    	rect(454, 75, 40, 40);
     }
 
     static public void main(String[] args) {
