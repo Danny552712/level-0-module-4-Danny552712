@@ -18,6 +18,7 @@ public class PinTheTail extends PApplet {
     int tailY;
     boolean set = false;
     int appeared = 0;
+    boolean win = false;
 
 
 
@@ -56,11 +57,19 @@ public class PinTheTail extends PApplet {
     			tailY = i;
     		}
     		set = true;
+    		//System.out.println(dist(105, 310, tailX, tailY));
         	//System.out.println("Set Tail");
         }
     	
-    	if(dist(105, 310, tailX, tailY) < 40) {
+    	
+    	if(dist(80, 225, tailX, tailY) < 85 && dist(80, 225, tailX, tailY) > 70) {
+    		//System.out.println("Winning position");
     		playWhoohoo();
+    		win = true;
+    	}
+    	
+    	if(win) {
+    		fill(0, 255, 0);
     	}
 
     	rect(0, 0, 30, 30);
